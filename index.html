@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jardim dos Pudins - Cardápio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Grand+Hotel&display=swap" rel="stylesheet">
+    <style>
+    /* Custom Font Assignments */
+    body { font-family: 'Montserrat', sans-serif; }
+    .font-display { font-family: 'Playfair Display', serif; }
+    .font-script { font-family: 'Grand Hotel', cursive; }
+    
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #ffe9d6; }
+    ::-webkit-scrollbar-thumb { background: #e1924f; border-radius: 4px; }
+    
+    /* Soft Shadow Utility */
+    .shadow-soft {
+        box-shadow: 0 10px 25px -5px rgba(225, 146, 79, 0.15), 0 8px 10px -6px rgba(225, 146, 79, 0.1);
+    }
+    
+    /* Flower Background Pattern (Optional subtle detail) */
+    .bg-flowers {
+        background-image: radial-gradient(#bcc83f 2px, transparent 2px);
+        background-size: 40px 40px;
+        opacity: 0.3;
+    }
+    </style>
+</head>
+<body class="bg-[#ffe9d6] text-[#4a2c11] antialiased selection:bg-[#bcc83f] selection:text-white overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 px-6 py-3 md:py-4 bg-[#ffe9d6]/95 backdrop-blur-md border-b border-[#e1924f]/20">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center group">
+                <svg viewBox="0 0 300 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-40 h-16 md:w-48 md:h-20 transition-transform group-hover:scale-105">
+                    <!-- Base plate -->
+                    <ellipse cx="50" cy="70" rx="30" ry="8" fill="#dad999"/>
+                    <!-- Pudding body -->
+                    <path d="M30 65 Q 50 75 70 65 L 62 35 Q 50 30 38 35 Z" fill="#ffe9d6"/>
+                    <!-- Syrup top -->
+                    <path d="M38 35 Q 50 45 62 35 Q 50 30 38 35 Z" fill="#e1924f"/>
+                    <!-- Syrup drips -->
+                    <path d="M 38 35 L 38 50 Q 43 55 45 50 L 45 38" fill="#e1924f"/>
+                    <path d="M 55 37 L 55 55 Q 60 60 62 55 L 62 35" fill="#e1924f"/>
+                    
+                    <!-- Text "Jardim" -->
+                    <text x="90" y="55" font-family="'Grand Hotel', cursive" font-size="48" fill="#e1924f">Jardim</text>
+                    <!-- Text "dos pudins" -->
+                    <text x="135" y="80" font-family="'Montserrat', sans-serif" font-weight="600" font-size="20" fill="#9d591f" letter-spacing="2">DOS PUDINS</text>
+                </svg>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex items-center gap-6 font-medium text-sm text-[#9d591f]">
+                <a href="#acasa" class="px-5 py-2 bg-[#bcc83f] text-white rounded-full shadow-soft transition-transform hover:-translate-y-0.5">Início</a>
+                <a href="#quiches" class="hover:text-[#e1924f] transition-colors">Quiches</a>
+                <a href="#pudins" class="hover:text-[#e1924f] transition-colors">Pudins</a>
+                <a href="#geladinhos" class="hover:text-[#e1924f] transition-colors">Geladinhos</a>
+                <a href="#especiais" class="hover:text-[#e1924f] transition-colors">Especiais</a>
+                <a href="#lembrancinhas" class="hover:text-[#e1924f] transition-colors">Lembrancinhas</a>
+                <a href="#bebidas" class="hover:text-[#e1924f] transition-colors">Bebidas</a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="lg:hidden p-2 text-[#e1924f]">
+                <i data-lucide="menu" class="w-8 h-8"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="acasa" class="relative pt-32 pb-20 md:pt-40 md:pb-32 min-h-screen flex flex-col justify-center overflow-hidden">
+        
+        <!-- Decorative Background Flowers -->
+        <div class="absolute inset-0 pointer-events-none opacity-20">
+            <svg class="absolute top-10 -left-20 w-96 h-96 text-[#bcc83f]" viewBox="0 0 200 200" fill="currentColor">
+                <path d="M100 0 C120 40 160 20 150 60 C190 70 170 110 140 100 C150 140 110 130 100 160 C80 120 40 140 50 100 C10 90 30 50 60 60 C50 20 90 30 100 0 Z"/>
+            </svg>
+            <svg class="absolute bottom-10 -right-20 w-96 h-96 text-[#eab6c3]" viewBox="0 0 200 200" fill="currentColor">
+                <path d="M100 0 C120 40 160 20 150 60 C190 70 170 110 140 100 C150 140 110 130 100 160 C80 120 40 140 50 100 C10 90 30 50 60 60 C50 20 90 30 100 0 Z"/>
+            </svg>
+        </div>
+
+        <!-- Main Content Layer -->
+        <div class="relative z-10 max-w-7xl mx-auto w-full px-4 flex flex-col items-center">
+            
+            <!-- Hero Title -->
+            <div class="text-center mb-8">
+                <h2 class="font-script text-[#bcc83f] text-4xl md:text-5xl mb-[-10px] z-10 relative">Bem-vindo ao</h2>
+                <h1 class="font-display text-[#e1924f] text-6xl md:text-8xl tracking-tight uppercase">Cardápio</h1>
+            </div>
+
+            <!-- Hero Image -->
+            <div class="relative w-full max-w-sm md:max-w-xl aspect-[4/3] md:aspect-[16/9] mb-8 md:mb-12 flex justify-center items-center">
+                <div class="absolute inset-0 bg-[#eab6c3] rounded-[3rem] transform rotate-3 scale-105 opacity-50"></div>
+                <img src="https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=1600" alt="Pudim Delicioso" class="w-full h-full object-cover rounded-[3rem] shadow-soft hover:scale-105 transition-transform duration-500 ease-in-out relative z-10 border-4 border-white">
+            </div>
+
+            <!-- Bottom Layout Grid -->
+            <div class="w-full flex flex-col md:flex-row gap-6 justify-center items-center">
+                <a href="#pudins" class="w-full md:w-auto flex items-center justify-center gap-3 bg-[#e1924f] text-white rounded-full px-8 py-3 shadow-soft hover:-translate-y-1 transition-all">
+                    <i data-lucide="cake-slice" class="w-5 h-5"></i>
+                    <span class="font-bold text-sm tracking-widest uppercase">Ver Pudins</span>
+                </a>
+                <a href="#quiches" class="w-full md:w-auto flex items-center justify-center gap-3 bg-[#dad999] text-[#4a2c11] rounded-full px-8 py-3 shadow-soft hover:-translate-y-1 transition-all">
+                    <i data-lucide="pizza" class="w-5 h-5"></i>
+                    <span class="font-bold text-sm tracking-widest uppercase">Ver Quiches</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiches Section -->
+    <section id="quiches" class="py-24 relative overflow-hidden border-t border-[#e1924f]/20 bg-white/50">
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16">
+                <span class="font-script text-[#bcc83f] text-4xl block mb-2">Salgados</span>
+                <h2 class="text-5xl md:text-6xl font-display tracking-tight text-[#e1924f] uppercase">Quiches do Jardim</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+                <!-- Imagem Quiche -->
+                <div class="relative">
+                    <div class="absolute inset-0 bg-[#dad999] rounded-[3rem] translate-x-4 translate-y-4"></div>
+                    <img src="https://images.unsplash.com/photo-1490457843367-34b21b6ccd85?w=800" alt="Quiche Artesanal" class="relative rounded-[3rem] shadow-soft hover:-translate-y-1 transition-all duration-300 w-full object-cover h-[400px] border-4 border-white">
+                </div>
+
+                <!-- Info Quiches -->
+                <div class="flex flex-col gap-6">
+                    <!-- Sabores -->
+                    <div class="bg-white/80 p-8 rounded-[2rem] shadow-soft border border-white">
+                        <h3 class="text-3xl font-display text-[#e1924f] mb-6 border-b border-[#ffe9d6] pb-4">Sabores</h3>
+                        <ul class="space-y-5">
+                            <li class="flex items-start gap-4">
+                                <div class="bg-[#bcc83f] text-white rounded-full p-1 mt-1">
+                                    <i data-lucide="check" class="w-4 h-4"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold text-xl text-[#9d591f]">Lorrane</span>
+                                    <p class="text-[#4a2c11]/70 text-sm mt-1">Bacon, muçarela e alho-poró</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <div class="bg-[#bcc83f] text-white rounded-full p-1 mt-1">
+                                    <i data-lucide="check" class="w-4 h-4"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold text-xl text-[#9d591f]">Caprese</span>
+                                    <p class="text-[#4a2c11]/70 text-sm mt-1">Muçarela, tomate cereja, manjericão e parmesão</p>
+                                </div>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <div class="bg-[#bcc83f] text-white rounded-full p-1 mt-1">
+                                    <i data-lucide="check" class="w-4 h-4"></i>
+                                </div>
+                                <div>
+                                    <span class="font-bold text-xl text-[#9d591f]">Frango c/ Catupiry</span>
+                                    <p class="text-[#4a2c11]/70 text-sm mt-1">Frango desfiado, muçarela e catupiry original</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Preços -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-5 rounded-2xl shadow-soft text-center border border-[#ffe9d6]">
+                            <span class="block text-[#9d591f]/70 text-sm font-bold uppercase tracking-wider mb-1">Mini (20g)</span>
+                            <span class="text-2xl font-display text-[#bcc83f]">R$ 2,49</span>
+                        </div>
+                        <div class="bg-white p-5 rounded-2xl shadow-soft text-center border border-[#ffe9d6]">
+                            <span class="block text-[#9d591f]/70 text-sm font-bold uppercase tracking-wider mb-1">Individual (150g)</span>
+                            <span class="text-2xl font-display text-[#bcc83f]">R$ 16,00</span>
+                        </div>
+                        <div class="bg-[#dad999] p-5 rounded-2xl shadow-soft text-center col-span-2">
+                            <span class="block text-[#4a2c11]/70 text-sm font-bold uppercase tracking-wider mb-1">Tamanho Família (1Kg)</span>
+                            <span class="text-3xl font-display text-[#9d591f]">R$ 80,00</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-[#eab6c3]/20 p-5 rounded-2xl flex flex-col md:flex-row justify-between items-center gap-2">
+                        <div class="text-center md:text-left">
+                            <span class="font-bold text-[#e1924f] block text-lg">Mini Quiches (Cento)</span>
+                            <span class="text-sm text-[#4a2c11]/70 font-medium">50 unid: R$ 124,50</span>
+                        </div>
+                        <span class="font-display text-2xl text-[#eab6c3]">100 unid: R$ 249,00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pudins Section -->
+    <section id="pudins" class="py-24 bg-white border-t border-[#e1924f]/20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-5xl md:text-6xl font-display tracking-tight text-[#e1924f] uppercase">Nossos Pudins</h2>
+                <p class="text-lg text-[#9d591f] max-w-2xl mx-auto mt-4 font-medium">A especialidade da casa. Textura perfeita, calda no ponto exato e aquele gostinho de quero mais.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Clássicos -->
+                <div class="bg-[#ffe9d6]/50 rounded-[2.5rem] p-6 shadow-soft hover:-translate-y-2 transition-transform duration-300 flex flex-col border border-[#ffe9d6]">
+                    <div class="rounded-[2rem] h-48 mb-6 overflow-hidden flex items-center justify-center">
+                         <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=800" class="w-full h-full object-cover" alt="Pudins Clássicos">
+                    </div>
+                    <div class="mb-4 text-center">
+                        <h3 class="text-4xl font-script text-[#e1924f]">Jotapê Clássico</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2 justify-center mb-6">
+                        <span class="bg-white text-[#9d591f] px-3 py-1 rounded-full text-xs font-bold shadow-sm">Leite Condensado</span>
+                        <span class="bg-white text-[#9d591f] px-3 py-1 rounded-full text-xs font-bold shadow-sm">Doce de Leite</span>
+                        <span class="bg-white text-[#9d591f] px-3 py-1 rounded-full text-xs font-bold shadow-sm">Chocolate</span>
+                        <span class="bg-white text-[#9d591f] px-3 py-1 rounded-full text-xs font-bold shadow-sm">Café</span>
+                    </div>
+                    <div class="mt-auto flex flex-col gap-3">
+                        <div class="bg-[#dad999] rounded-xl p-3 flex justify-between items-center">
+                            <span class="text-[#4a2c11] font-bold text-sm">P (130g)</span>
+                            <span class="font-display text-lg text-[#9d591f]">R$ 14,00</span>
+                        </div>
+                        <div class="bg-[#dad999] rounded-xl p-3 flex justify-between items-center">
+                            <span class="text-[#4a2c11] font-bold text-sm">M (600g)</span>
+                            <span class="font-display text-lg text-[#9d591f]">R$ 58,00</span>
+                        </div>
+                        <div class="bg-[#bcc83f] rounded-xl p-3 flex justify-between items-center text-white">
+                            <span class="font-bold text-sm">G (1.30kg)</span>
+                            <span class="font-display text-xl">R$ 89,00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Premium -->
+                <div class="bg-[#ffe9d6]/50 rounded-[2.5rem] p-6 shadow-soft hover:-translate-y-2 transition-transform duration-300 flex flex-col border border-[#ffe9d6] relative">
+                    <div class="rounded-[2rem] h-48 mb-6 overflow-hidden flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1579954115545-a95591f28bfc?w=800" class="w-full h-full object-cover" alt="Pudins Premium">
+                    </div>
+                    <div class="mb-4 text-center">
+                        <h3 class="text-4xl font-script text-[#e1924f]">Jotapê Premium</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2 justify-center mb-6">
+                        <span class="bg-white text-[#9d591f] px-3 py-1 rounded-full text-xs font-bold shadow-sm">Ninho c/ Nutella</span>
+                        <span class="bg-white text-[#9d591f] px-3 py-1 rounded-full text-xs font-bold shadow-sm">Pistache</span>
+                        <span class="bg-white text-[#9d591f] px-3 py-1 rounded-full text-xs font-bold shadow-sm">Coco</span>
+                        <span class="bg-white text-[#9d591f] px-3 py-1 rounded-full text-xs font-bold shadow-sm">Romeu e Julieta</span>
+                    </div>
+                    <div class="mt-auto flex flex-col gap-3">
+                        <div class="bg-[#dad999] rounded-xl p-3 flex justify-between items-center">
+                            <span class="text-[#4a2c11] font-bold text-sm">P (130g)</span>
+                            <span class="font-display text-lg text-[#9d591f]">R$ 16,00</span>
+                        </div>
+                        <div class="bg-[#dad999] rounded-xl p-3 flex justify-between items-center">
+                            <span class="text-[#4a2c11] font-bold text-sm">M (600g)</span>
+                            <span class="font-display text-lg text-[#9d591f]">R$ 68,00</span>
+                        </div>
+                        <div class="bg-[#bcc83f] rounded-xl p-3 flex justify-between items-center text-white">
+                            <span class="font-bold text-sm">G (1.30kg)</span>
+                            <span class="font-display text-xl">R$ 105,00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Diet -->
+                <div class="bg-[#ffe9d6]/50 rounded-[2.5rem] p-6 shadow-soft hover:-translate-y-2 transition-transform duration-300 flex flex-col border border-[#ffe9d6]">
+                    <div class="rounded-[2rem] h-48 mb-6 overflow-hidden flex items-center justify-center bg-white p-2">
+                        <img src="https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?w=800" class="w-full h-full object-cover rounded-[1.5rem]" alt="Pudim Diet">
+                    </div>
+                    <div class="mb-4 text-center">
+                        <h3 class="text-4xl font-script text-[#eab6c3]">Pudim Diet</h3>
+                    </div>
+                    <p class="text-[#9d591f] text-center font-medium mb-6 text-sm">Pudim de Leite condensado com calda de frutas vermelhas. Zero açúcar!</p>
+                    <div class="mt-auto flex flex-col gap-3">
+                        <div class="bg-[#dad999] rounded-xl p-3 flex justify-between items-center">
+                            <span class="text-[#4a2c11] font-bold text-sm">P (130g)</span>
+                            <span class="font-display text-lg text-[#9d591f]">R$ 20,00</span>
+                        </div>
+                        <div class="bg-[#dad999] rounded-xl p-3 flex justify-between items-center">
+                            <span class="text-[#4a2c11] font-bold text-sm">M (600g)</span>
+                            <span class="font-display text-lg text-[#9d591f]">R$ 88,00</span>
+                        </div>
+                        <div class="bg-[#bcc83f] rounded-xl p-3 flex justify-between items-center text-white">
+                            <span class="font-bold text-sm">G (1.30kg)</span>
+                            <span class="font-display text-xl">R$ 172,00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Geladinhos Section -->
+    <section id="geladinhos" class="py-24 bg-[#ffe9d6] border-t border-[#e1924f]/20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="font-script text-[#eab6c3] text-5xl block mb-2">Geladinhos</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Clássicos -->
+                <div class="bg-white rounded-[2.5rem] p-8 shadow-soft hover:-translate-y-2 transition-transform duration-300">
+                    <h3 class="text-3xl font-display text-[#e1924f] mb-6 border-b border-[#ffe9d6] pb-4">Clássicos</h3>
+                    <div class="flex flex-wrap gap-2 mb-8">
+                        <span class="bg-[#eab6c3] text-white px-4 py-1 rounded-full text-sm font-bold">Doce de Leite</span>
+                        <span class="bg-[#eab6c3] text-white px-4 py-1 rounded-full text-sm font-bold">Leite condensado</span>
+                        <span class="bg-[#eab6c3] text-white px-4 py-1 rounded-full text-sm font-bold">Café</span>
+                        <span class="bg-[#eab6c3] text-white px-4 py-1 rounded-full text-sm font-bold">Chocolate</span>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <div class="flex justify-between items-center bg-[#dad999] p-4 rounded-xl">
+                            <span class="font-bold text-[#4a2c11] uppercase tracking-wider text-sm">1 por</span>
+                            <span class="text-2xl font-display text-[#9d591f]">R$ 12,00</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-[#bcc83f] text-white p-4 rounded-xl shadow-md">
+                            <span class="font-bold uppercase tracking-wider text-sm">3 por</span>
+                            <span class="text-2xl font-display">R$ 30,00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Premium -->
+                <div class="bg-white rounded-[2.5rem] p-8 shadow-soft hover:-translate-y-2 transition-transform duration-300">
+                    <h3 class="text-3xl font-display text-[#e1924f] mb-6 border-b border-[#ffe9d6] pb-4">Premiuns</h3>
+                    <div class="flex flex-wrap gap-2 mb-8">
+                        <span class="bg-[#eab6c3] text-white px-4 py-1 rounded-full text-sm font-bold">Pistache</span>
+                        <span class="bg-[#eab6c3] text-white px-4 py-1 rounded-full text-sm font-bold">Ninho c/ Nutella</span>
+                        <span class="bg-[#eab6c3] text-white px-4 py-1 rounded-full text-sm font-bold">Chocolate Branco c/ morango</span>
+                        <span class="bg-[#eab6c3] text-white px-4 py-1 rounded-full text-sm font-bold">Coco</span>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <div class="flex justify-between items-center bg-[#dad999] p-4 rounded-xl">
+                            <span class="font-bold text-[#4a2c11] uppercase tracking-wider text-sm">1 por</span>
+                            <span class="text-2xl font-display text-[#9d591f]">R$ 14,00</span>
+                        </div>
+                        <div class="flex justify-between items-center bg-[#bcc83f] text-white p-4 rounded-xl shadow-md">
+                            <span class="font-bold uppercase tracking-wider text-sm">3 por</span>
+                            <span class="text-2xl font-display">R$ 35,00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Especiais Section -->
+    <section id="especiais" class="py-24 bg-white border-t border-[#e1924f]/20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="font-script text-[#bcc83f] text-5xl block mb-2">Confeitaria do Jardim</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Morangoff -->
+                <div class="bg-white border border-[#ffe9d6] rounded-[2rem] p-5 shadow-soft flex flex-col items-center">
+                    <div class="w-full h-48 bg-[#ffe9d6] rounded-[1.5rem] mb-6 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?w=800" class="w-full h-full object-cover" alt="Morangoff">
+                    </div>
+                    <span class="bg-[#eab6c3] text-white px-6 py-2 rounded-full font-bold text-lg mb-6 -mt-10 relative z-10 shadow-md">Morangoff</span>
+                    
+                    <div class="w-full flex justify-between gap-2 mt-auto">
+                        <div class="bg-[#dad999] flex-1 text-center py-2 rounded-xl">
+                            <span class="block text-xs font-bold text-[#4a2c11]">P (180g)</span>
+                            <span class="font-display text-[#9d591f]">R$ 19,90</span>
+                        </div>
+                        <div class="bg-[#bcc83f] text-white flex-1 text-center py-2 rounded-xl">
+                            <span class="block text-xs font-bold">G (1.50kg)</span>
+                            <span class="font-display">R$ 149,00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Banoff -->
+                <div class="bg-white border border-[#ffe9d6] rounded-[2rem] p-5 shadow-soft flex flex-col items-center">
+                    <div class="w-full h-48 bg-[#ffe9d6] rounded-[1.5rem] mb-6 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=800" class="w-full h-full object-cover" alt="Banoff">
+                    </div>
+                    <span class="bg-[#eab6c3] text-white px-6 py-2 rounded-full font-bold text-lg mb-6 -mt-10 relative z-10 shadow-md">Banoff</span>
+                    
+                    <div class="w-full flex justify-between gap-2 mt-auto">
+                        <div class="bg-[#dad999] flex-1 text-center py-2 rounded-xl">
+                            <span class="block text-xs font-bold text-[#4a2c11]">P (180g)</span>
+                            <span class="font-display text-[#9d591f]">R$ 18,00</span>
+                        </div>
+                        <div class="bg-[#bcc83f] text-white flex-1 text-center py-2 rounded-xl">
+                            <span class="block text-xs font-bold">G (1.50kg)</span>
+                            <span class="font-display">R$ 149,00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bala Baiana -->
+                <div class="bg-white border border-[#ffe9d6] rounded-[2rem] p-5 shadow-soft flex flex-col items-center">
+                    <div class="w-full h-48 bg-[#ffe9d6] rounded-[1.5rem] mb-6 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1579954115545-a95591f28bfc?w=800" class="w-full h-full object-cover" alt="Bala Baiana">
+                    </div>
+                    <span class="bg-[#eab6c3] text-white px-6 py-2 rounded-full font-bold text-lg mb-6 -mt-10 relative z-10 shadow-md">Bala Baiana</span>
+                    
+                    <div class="w-full mt-auto">
+                        <div class="bg-[#dad999] text-center py-3 rounded-xl w-full">
+                            <span class="block text-xs font-bold text-[#4a2c11]">P (130g)</span>
+                            <span class="font-display text-xl text-[#9d591f]">R$ 15,00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Capivara -->
+                <div class="bg-white border border-[#ffe9d6] rounded-[2rem] p-5 shadow-soft flex flex-col items-center">
+                    <div class="w-full h-48 bg-[#ffe9d6] rounded-[1.5rem] mb-6 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=800" class="w-full h-full object-cover" alt="Capivara">
+                    </div>
+                    <span class="bg-[#eab6c3] text-white px-6 py-2 rounded-full font-bold text-lg mb-6 -mt-10 relative z-10 shadow-md">Capivara</span>
+                    
+                    <div class="w-full mt-auto">
+                        <div class="bg-[#dad999] text-center py-3 rounded-xl w-full">
+                            <span class="block text-xs font-bold text-[#4a2c11]">300g</span>
+                            <span class="font-display text-xl text-[#9d591f]">R$ 35,00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bolopudim -->
+                <div class="bg-white border border-[#ffe9d6] rounded-[2rem] p-5 shadow-soft flex flex-col items-center">
+                    <div class="w-full h-48 bg-[#ffe9d6] rounded-[1.5rem] mb-6 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=800" class="w-full h-full object-cover" alt="Bolopudim">
+                    </div>
+                    <span class="bg-[#eab6c3] text-white px-6 py-2 rounded-full font-bold text-lg mb-6 -mt-10 relative z-10 shadow-md">Bolopudim</span>
+                    
+                    <div class="w-full flex justify-between gap-2 mt-auto">
+                        <div class="bg-[#dad999] flex-1 text-center py-2 rounded-xl">
+                            <span class="block text-xs font-bold text-[#4a2c11]">Fatia (170g)</span>
+                            <span class="font-display text-[#9d591f]">R$ 12,00</span>
+                        </div>
+                        <div class="bg-[#bcc83f] text-white flex-1 text-center py-2 rounded-xl">
+                            <span class="block text-xs font-bold">Inteiro (1.20kg)</span>
+                            <span class="font-display">R$ 76,00</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Combos Section -->
+    <section id="combos" class="py-24 bg-[#ffe9d6] border-t border-[#e1924f]/20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="font-script text-[#e1924f] text-5xl block mb-2">Combos</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Combo 1 -->
+                <div class="bg-white rounded-[2rem] p-8 shadow-soft text-center flex flex-col">
+                    <h3 class="text-3xl font-display text-[#e1924f] mb-4">04 Pudins<br>Clássicos</h3>
+                    <div class="mt-auto">
+                        <div class="bg-[#dad999] py-4 rounded-xl">
+                            <span class="font-display text-3xl text-[#9d591f]">R$ 52,00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Combo 2 -->
+                <div class="bg-white rounded-[2rem] p-8 shadow-soft text-center flex flex-col border-2 border-[#bcc83f] transform md:-translate-y-4">
+                    <h3 class="text-3xl font-display text-[#bcc83f] mb-4">04 Pudins<br>Premiuns</h3>
+                    <div class="mt-auto">
+                        <div class="bg-[#bcc83f] py-4 rounded-xl text-white">
+                            <span class="font-display text-3xl">R$ 58,00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Combo 3 -->
+                <div class="bg-white rounded-[2rem] p-8 shadow-soft text-center flex flex-col">
+                    <h3 class="text-3xl font-display text-[#e1924f] mb-2">Degustação</h3>
+                    <p class="text-[#4a2c11] font-medium text-sm mb-6">10 pudins P e no máximo 5 premiuns</p>
+                    <div class="mt-auto">
+                        <div class="bg-[#dad999] py-4 rounded-xl">
+                            <span class="font-display text-3xl text-[#9d591f]">R$ 134,00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lembrancinhas e Bebidas -->
+    <section id="lembrancinhas" class="py-24 bg-white border-t border-[#e1924f]/20">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                
+                <!-- Lembrancinhas -->
+                <div class="text-center md:text-left">
+                    <h2 class="font-script text-[#e1924f] text-5xl mb-6">Lembrancinhas</h2>
+                    <p class="text-[#9d591f] mb-6 font-medium text-lg leading-relaxed">
+                        O Jardim dos pudins quer tornar seu evento ainda mais especial. Temos pudim para lembrancinha a partir de <strong class="text-[#eab6c3] text-xl">R$ 7,00</strong> (o de 80g acima de 10 unidades) já com etiqueta personalizada.
+                    </p>
+                    <div class="bg-[#ffe9d6]/50 border border-[#ffe9d6] rounded-2xl p-5 mb-6">
+                        <span class="font-bold text-[#e1924f] block mb-1">Opções adicionais:</span>
+                        <span class="text-[#4a2c11]">Enfeites, colherzinhas e fita de cetim</span>
+                    </div>
+                    <p class="text-sm text-[#4a2c11]/70 italic">
+                        Para pedidos acima de 100 unidades, valores especiais, fazemos um orçamento personalizado.
+                    </p>
+                </div>
+
+                <!-- Bebidas (Stylized as a pink starburst shape in original, we use a rounded box with star icon) -->
+                <div id="bebidas" class="bg-[#eab6c3] rounded-[3rem] p-10 text-white shadow-soft relative transform md:rotate-2 hover:rotate-0 transition-transform">
+                    <div class="absolute -top-5 -left-5 bg-white p-3 rounded-full shadow-md">
+                        <i data-lucide="coffee" class="w-8 h-8 text-[#eab6c3]"></i>
+                    </div>
+                    <h2 class="text-4xl font-display mb-8 text-center">Vai uma bebida, aí?</h2>
+                    
+                    <ul class="space-y-6">
+                        <li class="flex justify-between items-center border-b border-white/30 pb-4">
+                            <span class="text-xl font-bold">Água</span>
+                            <span class="text-2xl font-display">R$ 5,50</span>
+                        </li>
+                        <li class="flex justify-between items-center border-b border-white/30 pb-4">
+                            <span class="text-xl font-bold">Refrigerante (lata)</span>
+                            <span class="text-2xl font-display">R$ 8,90</span>
+                        </li>
+                        <li class="flex justify-between items-center">
+                            <span class="text-xl font-bold">Café</span>
+                            <span class="text-2xl font-display">R$ 7,90</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#ffe9d6] text-[#4a2c11] py-12 border-t border-[#e1924f]/20">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center group">
+                <svg viewBox="0 0 300 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-40 h-16 transition-transform group-hover:scale-105">
+                    <ellipse cx="50" cy="70" rx="30" ry="8" fill="#dad999"/>
+                    <path d="M30 65 Q 50 75 70 65 L 62 35 Q 50 30 38 35 Z" fill="#white"/>
+                    <path d="M38 35 Q 50 45 62 35 Q 50 30 38 35 Z" fill="#e1924f"/>
+                    <path d="M 38 35 L 38 50 Q 43 55 45 50 L 45 38" fill="#e1924f"/>
+                    <path d="M 55 37 L 55 55 Q 60 60 62 55 L 62 35" fill="#e1924f"/>
+                    <text x="90" y="55" font-family="'Grand Hotel', cursive" font-size="48" fill="#e1924f">Jardim</text>
+                    <text x="135" y="80" font-family="'Montserrat', sans-serif" font-weight="600" font-size="20" fill="#9d591f" letter-spacing="2">DOS PUDINS</text>
+                </svg>
+            </div>
+            
+            <div class="flex gap-6 text-[#9d591f] font-bold">
+                <a href="#" class="hover:text-[#e1924f] transition-colors">Instagram</a>
+                <a href="#" class="hover:text-[#e1924f] transition-colors">Facebook</a>
+                <a href="#" class="hover:text-[#e1924f] transition-colors">WhatsApp</a>
+            </div>
+
+            <p class="text-[#4a2c11]/60 text-sm font-medium">© 2026 Jardim dos Pudins. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        
+        // Mobile Menu Toggle Logic
+        const menuBtn = document.querySelector('button.lg\\:hidden');
+        
+        if(menuBtn) {
+            menuBtn.addEventListener('click', () => {
+                const mobileMenu = document.createElement('div');
+                mobileMenu.className = 'fixed inset-0 bg-[#ffe9d6] z-[60] flex flex-col items-center justify-center gap-6 p-8 transition-opacity duration-300';
+                mobileMenu.innerHTML = \`
+                    <button class="absolute top-6 right-6 p-2 close-menu text-[#e1924f]">
+                        <i data-lucide="x" class="w-8 h-8"></i>
+                    </button>
+                    <a href="#acasa" class="text-3xl font-display hover:text-[#bcc83f] text-[#e1924f]">Início</a>
+                    <a href="#quiches" class="text-3xl font-display hover:text-[#bcc83f] text-[#e1924f]">Quiches</a>
+                    <a href="#pudins" class="text-3xl font-display hover:text-[#bcc83f] text-[#e1924f]">Pudins</a>
+                    <a href="#geladinhos" class="text-3xl font-display hover:text-[#bcc83f] text-[#e1924f]">Geladinhos</a>
+                    <a href="#especiais" class="text-3xl font-display hover:text-[#bcc83f] text-[#e1924f]">Especiais</a>
+                    <a href="#lembrancinhas" class="text-3xl font-display hover:text-[#bcc83f] text-[#e1924f]">Lembrancinhas</a>
+                    <a href="#bebidas" class="text-3xl font-display hover:text-[#bcc83f] text-[#e1924f]">Bebidas</a>
+                    <a href="#combos" class="text-3xl font-display hover:text-[#bcc83f] text-[#e1924f]">Combos</a>
+                \`;
+                document.body.appendChild(mobileMenu);
+                lucide.createIcons();
+                document.body.style.overflow = 'hidden';
+
+                mobileMenu.querySelector('.close-menu').addEventListener('click', () => {
+                    mobileMenu.remove();
+                    document.body.style.overflow = 'auto';
+                });
+                
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.remove();
+                        document.body.style.overflow = 'auto';
+                    });
+                });
+            });
+        }
+    </script>
+
+</body>
+</html>
