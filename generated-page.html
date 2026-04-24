@@ -1,0 +1,354 @@
+<html lang="ro"><head>
+<script>
+try{if(window.parent&&window.parent!==window){window.parent.promotekit_referral="1fd2949a-d22c-431b-92bf-02d4ad04ee24";window.parent.document.cookie="promotekit_referral=1fd2949a-d22c-431b-92bf-02d4ad04ee24;path=/;domain=.aura.build;max-age=31536000"}}catch(e){}
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fresh Kebab - Eat Different, Eat Fresh</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Titan+One&amp;display=swap" rel="stylesheet">
+<style>
+/* Custom Font Assignments */
+body { font-family: 'Montserrat', sans-serif; }
+.font-display { font-family: 'Titan One', cursive; }
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #E6F9EA; }
+::-webkit-scrollbar-thumb { background: #000000; border-radius: 4px; }
+/* Text Stroke utility for the Bubble Text effect */
+.text-stroke-3 {
+-webkit-text-stroke: 3px black;
+paint-order: stroke fill;
+}
+/* Hard Shadow Utility */
+.shadow-hard {
+box-shadow: 4px 4px 0px 0px #000000;
+}
+.shadow-hard-sm {
+box-shadow: 2px 2px 0px 0px #000000;
+}
+.shadow-text-hard {
+text-shadow: 6px 6px 0px #000000;
+}
+@media (max-width: 768px) {
+.shadow-text-hard {
+text-shadow: 3px 3px 0px #000000;
+}
+.text-stroke-3 {
+-webkit-text-stroke: 1.5px black;
+}
+}
+</style></head>
+<body class="bg-[#E6F9EA] text-gray-900 antialiased selection:bg-[#6ADE7D] selection:text-black overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 px-6 py-4 md:py-6 bg-[#E6F9EA]/90 backdrop-blur-sm border-b border-black/5">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-1 group">
+                <div class="relative w-8 h-10 mr-1 transition-transform group-hover:rotate-12">
+                    <!-- Kebab Icon Representation -->
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-black w-full h-full fill-[#6ADE7D]">
+                        <path d="M12 2L12 22M7 6H17M6 10H18M7 14H17M8 18H16" stroke-linecap="round"></path>
+                    </svg>
+                </div>
+                <div class="text-2xl tracking-tight font-display text-[#555] flex flex-col leading-none">
+                    <span class="text-[#6ADE7D] text-shadow-sm stroke-black" style="-webkit-text-stroke: 1px black;">Fresh</span>
+                    <span class="-mt-1 text-black">Kebab</span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center gap-8 font-medium text-sm">
+                <a href="#acasa" class="px-5 py-2 bg-[#6ADE7D] border-2 border-black rounded-full shadow-hard-sm transition-transform hover:-translate-y-0.5">Acasa</a>
+                <a href="#despre" class="hover:text-[#6ADE7D] transition-colors">Despre noi</a>
+                <a href="#meniu" class="hover:text-[#6ADE7D] transition-colors">Meniu</a>
+                <a href="#parteneri" class="hover:text-[#6ADE7D] transition-colors">Parteneri</a>
+                <a href="#contact" class="hover:text-[#6ADE7D] transition-colors">Contact</a>
+            </div>
+
+            <!-- CTA Button -->
+            <a href="https://wolt.com/ro/rou/timisoara/restaurant/fresh-kebab-centru-67daff6ce014794baf590645?pid=google&amp;c=ROU_Web_FTU_Search_DSA_All&amp;af_adset=DSA&amp;af_keywords=&amp;keyword_match_type=&amp;matchtype=&amp;device=c&amp;utm_adgroup=DSA&amp;utm_keyword=&amp;utm_term=&amp;adgroup_id=176380529177&amp;keyword_id=dsa-19959388920&amp;ad_id=750305405200&amp;gad_campaignid=22473557682" target="_blank" class="hidden md:flex items-center gap-3 bg-[#1ecf42] border-2 border-black rounded-full px-1 pl-1 py-1 pr-6 shadow-hard hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] transition-all duration-200 group">
+                <div class="bg-white border-2 border-black rounded-full p-1.5 group-hover:rotate-45 transition-transform duration-300">
+                    <i data-lucide="arrow-up-right" class="w-4 h-4 text-black stroke-[2.5]"></i>
+                </div>
+                <span class="font-bold text-xs tracking-wide">COMANDA ACUM!</span>
+            </a>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="md:hidden p-2">
+                <i data-lucide="menu" class="w-8 h-8 text-black"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="acasa" class="relative pt-32 pb-20 md:pt-40 md:pb-32 min-h-screen flex flex-col justify-center overflow-hidden">
+        
+        <!-- Big Background Text Layer -->
+        <div class="absolute inset-0 flex flex-col items-center justify-center pointer-events-none select-none z-0 mt-[-5vh]">
+            <h1 class="font-display text-[#86EFAC] text-stroke-3 shadow-text-hard text-[16vw] md:text-[11vw] leading-[0.85] text-center w-full uppercase transform -rotate-2 md:rotate-0">
+                EAT DIFFERENT
+            </h1>
+            <h1 class="font-display text-[#86EFAC] text-stroke-3 shadow-text-hard text-[16vw] md:text-[11vw] leading-[0.85] text-center w-full uppercase transform rotate-2 md:rotate-0">
+                EAT FRESH
+            </h1>
+        </div>
+
+        <!-- Main Content Layer -->
+        <div class="relative z-10 max-w-7xl mx-auto w-full px-4 flex flex-col items-center">
+            
+            <!-- Kebab Image -->
+            <!-- Using a high quality transparent kebab image -->
+            <div class="relative w-full max-w-sm md:max-w-2xl aspect-[4/3] md:aspect-[16/9] mb-8 md:mb-12 flex justify-center items-center">
+                <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/917d6f93-fb36-439a-8c48-884b67b35381_1600w.jpg" alt="Fresh Kebab Delicious" class="w-full h-full object-contain drop-shadow-[0_20px_25px_rgba(0,0,0,0.25)] hover:scale-105 transition-transform duration-500 ease-in-out filter brightness-105 contrast-110">
+            </div>
+
+            <!-- Bottom Layout Grid -->
+            <div class="w-full grid grid-cols-1 md:grid-cols-12 gap-8 items-end">
+                
+                <!-- Left: Decorative Arrow -->
+                <div class="hidden md:block md:col-span-3 relative h-32">
+                    <svg class="absolute bottom-0 right-0 w-full h-full text-[#38782B]" viewBox="0 0 200 120" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+                        <path d="M180,10 C150,5 100,20 80,60 C60,100 100,110 140,100 C170,90 190,60 160,80 C130,100 50,110 10,80"></path>
+                        <path d="M10,80 L20,70 M10,80 L25,90"></path>
+                    </svg>
+                </div>
+
+                <!-- Center: CTAs -->
+                <div class="md:col-span-6 flex flex-col md:flex-row gap-4 justify-center items-center w-full">
+                    <a href="https://wolt.com/ro/rou/timisoara/restaurant/fresh-kebab-centru-67daff6ce014794baf590645?pid=google&amp;c=ROU_Web_FTU_Search_DSA_All&amp;af_adset=DSA&amp;af_keywords=&amp;keyword_match_type=&amp;matchtype=&amp;device=c&amp;utm_adgroup=DSA&amp;utm_keyword=&amp;utm_term=&amp;adgroup_id=176380529177&amp;keyword_id=dsa-19959388920&amp;ad_id=750305405200&amp;gad_campaignid=22473557682" target="_blank" class="w-full md:w-auto flex items-center justify-between gap-4 bg-[#28D156] border-2 border-black rounded-full pl-2 pr-8 py-2 shadow-hard hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] transition-all">
+                        <div class="bg-white border-2 border-black rounded-full p-2">
+                            <i data-lucide="arrow-up-right" class="w-5 h-5 text-black"></i>
+                        </div>
+                        <span class="font-bold text-sm tracking-tight">COMANDA ACUM!</span>
+                    </a>
+
+                    <a href="#meniu" class="w-full md:w-auto flex items-center justify-between gap-4 bg-[#9dfaa8] border-2 border-black rounded-full pl-2 pr-8 py-2 shadow-hard hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] transition-all">
+                        <div class="bg-white border-2 border-black rounded-full p-2">
+                            <i data-lucide="utensils" class="w-5 h-5 text-black"></i>
+                        </div>
+                        <span class="font-bold text-sm tracking-tight">VEZI MENIU</span>
+                    </a>
+                </div>
+
+                <!-- Right: Badges -->
+                <div class="md:col-span-3 flex flex-row md:flex-col gap-4 justify-center md:items-end text-right">
+                    <div class="flex items-center gap-3 group cursor-default">
+                        <div class="flex flex-col">
+                            <span class="text-[10px] md:text-xs text-gray-600 font-medium">Ingrediente proaspete</span>
+                            <span class="font-bold text-xl md:text-2xl leading-none tracking-tight text-[#444]">FRESH</span>
+                        </div>
+                        <div class="w-10 h-10 md:w-12 md:h-12 bg-[#28D156] border-2 border-black rounded-full flex items-center justify-center group-hover:rotate-12 transition-transform">
+                            <i data-lucide="leaf" class="w-5 h-5 md:w-6 md:h-6 text-white fill-white"></i>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-3 group cursor-default">
+                        <div class="flex flex-col">
+                            <span class="text-[10px] md:text-xs text-gray-600 font-medium">Optiuni vegetariene</span>
+                            <span class="font-bold text-xl md:text-2xl leading-none tracking-tight text-[#444]">VEGAN</span>
+                        </div>
+                        <div class="w-10 h-10 md:w-12 md:h-12 bg-[#28D156] border-2 border-black rounded-full flex items-center justify-center group-hover:rotate-12 transition-transform">
+                            <i data-lucide="carrot" class="w-5 h-5 md:w-6 md:h-6 text-white fill-white"></i>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-3 group cursor-default">
+                        <div class="flex flex-col">
+                            <span class="text-[10px] md:text-xs text-gray-600 font-medium">Certificat HALAL</span>
+                            <span class="font-bold text-xl md:text-2xl leading-none tracking-tight text-[#444]">HALAL</span>
+                        </div>
+                        <div class="w-10 h-10 md:w-12 md:h-12 bg-[#28D156] border-2 border-black rounded-full flex items-center justify-center group-hover:rotate-12 transition-transform">
+                            <i data-lucide="check-circle" class="w-5 h-5 md:w-6 md:h-6 text-white fill-white"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section Placeholder -->
+    <section id="despre" class="py-24 bg-white border-t-2 border-black">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-[#28D156] font-bold tracking-widest text-sm uppercase mb-2 block">Povestea Noastra</span>
+                <h2 class="text-4xl md:text-5xl font-display mb-6 tracking-tight">Mai mult decat un simplu Kebab.</h2>
+                <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                    La Fresh Kebab, credem ca mancarea rapida nu trebuie sa fie un compromis. Folosim doar carne proaspata, legume taiate zilnic si sosuri facute in casa dupa retete originale.
+                </p>
+                <div class="flex gap-4">
+                    <div class="px-4 py-3 bg-[#E6F9EA] rounded-xl border-2 border-black shadow-hard-sm">
+                        <span class="block text-2xl font-bold mb-1">100%</span>
+                        <span class="text-xs text-gray-600 font-medium">Carne Naturala</span>
+                    </div>
+                    <div class="px-4 py-3 bg-[#E6F9EA] rounded-xl border-2 border-black shadow-hard-sm">
+                        <span class="block text-2xl font-bold mb-1">24/7</span>
+                        <span class="text-xs text-gray-600 font-medium">Ingrediente Proaspete</span>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="absolute inset-0 bg-[#28D156] rounded-2xl border-2 border-black translate-x-4 translate-y-4"></div>
+                <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/4734259a-bad7-422f-981e-ce01e79184f2_1600w.jpg" alt="Chef preparing kebab" class="relative rounded-2xl border-2 border-black grayscale hover:grayscale-0 transition-all duration-500 w-full object-cover h-[400px]">
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Preview Section -->
+    <section id="meniu" class="py-24 bg-[#E6F9EA] border-t-2 border-black">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-6xl font-display mb-4 tracking-tight">Preferatele Clientilor</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Descopera cele mai populare alegeri din meniul nostru. Comanda acum si bucura-te de gustul autentic.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-3xl border-2 border-black p-6 shadow-hard hover:-translate-y-2 transition-transform duration-300">
+                    <div class="bg-gray-100 rounded-xl h-48 mb-6 overflow-hidden border border-black/10 flex items-center justify-center">
+                         <img src="https://img.freepik.com/premium-photo/doner-kebab-shawarma-sandwich-isolated-white-background_185193-76495.jpg" class="w-full h-full object-cover mix-blend-multiply" alt="Classic Kebab">
+                    </div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold tracking-tight">Kebab Clasic</h3>
+                        <span class="bg-[#28D156] px-2 py-1 rounded-md text-xs font-bold border border-black">POPULAR</span>
+                    </div>
+                    <p class="text-gray-500 text-sm mb-6">Carne rotisata, legume proaspete, sos de usturoi, lipie calda.</p>
+                    <a href="https://wolt.com/ro/rou/timisoara/restaurant/fresh-kebab-centru-67daff6ce014794baf590645" target="_blank" class="w-full block text-center py-3 rounded-xl border-2 border-black font-bold hover:bg-black hover:text-white transition-colors">
+                        Comanda pe Wolt
+                    </a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-3xl border-2 border-black p-6 shadow-hard hover:-translate-y-2 transition-transform duration-300">
+                    <div class="bg-gray-100 rounded-xl h-48 mb-6 overflow-hidden border border-black/10 flex items-center justify-center">
+                        <img src="https://img.freepik.com/premium-photo/shawarma-plate-isolated-white-background_185193-76497.jpg" class="w-full h-full object-cover mix-blend-multiply" alt="Kebab la Farfurie">
+                    </div>
+                    <h3 class="text-xl font-bold tracking-tight mb-2">Kebab la Farfurie</h3>
+                    <p class="text-gray-500 text-sm mb-6">Portie generoasa cu cartofi prajiti, salata asortata si extra carne.</p>
+                    <a href="https://wolt.com/ro/rou/timisoara/restaurant/fresh-kebab-centru-67daff6ce014794baf590645" target="_blank" class="w-full block text-center py-3 rounded-xl border-2 border-black font-bold hover:bg-black hover:text-white transition-colors">
+                        Comanda pe Wolt
+                    </a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-3xl border-2 border-black p-6 shadow-hard hover:-translate-y-2 transition-transform duration-300">
+                    <div class="bg-gray-100 rounded-xl h-48 mb-6 overflow-hidden border border-black/10 flex items-center justify-center">
+                        <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/c543a9e1-f226-4ced-80b0-feb8445a75b9_1600w.jpg" class="w-full h-full object-cover" alt="Vegetarian">
+                    </div>
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold tracking-tight">Kebab Vegetarian</h3>
+                        <span class="bg-[#9dfaa8] px-2 py-1 rounded-md text-xs font-bold border border-black">NOU</span>
+                    </div>
+                    <p class="text-gray-500 text-sm mb-6">Falafel crocant, hummus, tabouleh si legume de sezon.</p>
+                    <a href="https://wolt.com/ro/rou/timisoara/restaurant/fresh-kebab-centru-67daff6ce014794baf590645" target="_blank" class="w-full block text-center py-3 rounded-xl border-2 border-black font-bold hover:bg-black hover:text-white transition-colors">
+                        Comanda pe Wolt
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section id="parteneri" class="py-16 bg-white border-t-2 border-black">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <span class="text-sm font-semibold text-gray-400 uppercase tracking-widest mb-8 block">Livram prin partenerii nostri</span>
+            <div class="flex flex-wrap justify-center gap-12 grayscale opacity-60 hover:opacity-100 transition-opacity duration-300">
+                <!-- Wolt Logo SVG -->
+                <svg class="h-10" viewBox="0 0 100 40" fill="currentColor">
+                    <path d="M15,30 L10,10 L5,30 L0,10 H5 L8,22 L12,10 H18 L22,22 L25,10 H30 L25,30 H20 L17,18 L14,30 H15 Z" stroke="black" stroke-width="2"></path>
+                    <text x="35" y="28" font-family="Arial" font-weight="900" font-size="24">Wolt</text>
+                </svg>
+                <!-- Glovo Placeholder -->
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-full border-2 border-black bg-yellow-400"></div>
+                    <span class="text-2xl font-black italic">Glovo</span>
+                </div>
+                <!-- Tazz Placeholder -->
+                <div class="flex items-center gap-2">
+                    <div class="w-8 h-8 rounded-full border-2 border-black bg-red-600"></div>
+                    <span class="text-2xl font-black italic">Tazz</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-[#E6F9EA] border-t-2 border-black relative overflow-hidden">
+        <div class="max-w-3xl mx-auto px-6 relative z-10 text-center">
+            <h2 class="text-4xl md:text-5xl font-display mb-6 tracking-tight">Intra in legatura cu noi</h2>
+            <p class="text-lg text-gray-600 mb-10">Ai intrebari sau sugestii? Suntem aici pentru tine.</p>
+            
+            <div class="flex flex-col md:flex-row justify-center gap-6">
+                <a href="mailto:contact@freshkebab.ro" class="group flex items-center justify-center gap-3 bg-white border-2 border-black rounded-xl px-8 py-4 shadow-hard hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] transition-all">
+                    <i data-lucide="mail" class="w-6 h-6 text-[#28D156] group-hover:scale-110 transition-transform"></i>
+                    <span class="font-bold text-lg">contact@freshkebab.ro</span>
+                </a>
+                
+                <a href="tel:+40700000000" class="group flex items-center justify-center gap-3 bg-white border-2 border-black rounded-xl px-8 py-4 shadow-hard hover:shadow-none hover:translate-x-[2px] hover:translate-y-[2px] transition-all">
+                    <i data-lucide="phone" class="w-6 h-6 text-[#28D156] group-hover:scale-110 transition-transform"></i>
+                    <span class="font-bold text-lg">+40 700 000 000</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Decorative background elements -->
+        <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-[#28D156] rounded-full border-2 border-black opacity-20"></div>
+        <div class="absolute top-10 -right-10 w-24 h-24 bg-[#9dfaa8] rounded-full border-2 border-black opacity-20"></div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-8">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="flex items-center gap-2">
+                 <div class="w-6 h-6 bg-[#6ADE7D] rounded-full flex items-center justify-center">
+                     <span class="text-black font-bold text-xs">F</span>
+                 </div>
+                 <span class="font-bold tracking-tight">Fresh Kebab</span>
+            </div>
+            <p class="text-gray-400 text-sm">© 2024 Fresh Kebab. Toate drepturile rezervate.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        
+        // Mobile Menu Toggle Logic
+        const menuBtn = document.querySelector('button.md\\:hidden');
+        const navLinks = document.querySelector('.hidden.md\\:flex');
+        
+        if(menuBtn) {
+            menuBtn.addEventListener('click', () => {
+                const mobileMenu = document.createElement('div');
+                mobileMenu.className = 'fixed inset-0 bg-[#E6F9EA] z-[60] flex flex-col items-center justify-center gap-8 p-8 transition-opacity duration-300';
+                mobileMenu.innerHTML = `
+                    <button class="absolute top-6 right-6 p-2 close-menu">
+                        <i data-lucide="x" class="w-8 h-8 text-black"></i>
+                    </button>
+                    <a href="#acasa" class="text-3xl font-display hover:text-[#28D156]">Acasa</a>
+                    <a href="#despre" class="text-3xl font-display hover:text-[#28D156]">Despre noi</a>
+                    <a href="#meniu" class="text-3xl font-display hover:text-[#28D156]">Meniu</a>
+                    <a href="#contact" class="text-3xl font-display hover:text-[#28D156]">Contact</a>
+                    <a href="https://wolt.com" target="_blank" class="mt-4 px-8 py-3 bg-[#28D156] border-2 border-black rounded-full font-bold shadow-hard">COMANDA ACUM</a>
+                `;
+                document.body.appendChild(mobileMenu);
+                lucide.createIcons();
+                document.body.style.overflow = 'hidden';
+
+                mobileMenu.querySelector('.close-menu').addEventListener('click', () => {
+                    mobileMenu.remove();
+                    document.body.style.overflow = 'auto';
+                });
+                
+                mobileMenu.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        mobileMenu.remove();
+                        document.body.style.overflow = 'auto';
+                    });
+                });
+            });
+        }
+    </script>
+
+</body></html>
