@@ -67,9 +67,9 @@
             <!-- Desktop Menu -->
             <div class="hidden lg:flex items-center gap-6 font-medium text-sm text-[#9d591f]">
                 <a href="cardapio.html" class="hover:text-[#e1924f] transition-colors">Cardápio Geral</a>
-                <a href="#ovos" class="hover:text-[#e1924f] transition-colors">Ovos</a>
-                <a href="#pudins" class="hover:text-[#e1924f] transition-colors">Pudins Especiais</a>
-                <a href="#kits" class="hover:text-[#e1924f] transition-colors">Kits</a>
+                <a href="#ovos-trufados" class="hover:text-[#e1924f] transition-colors">Ovos</a>
+                <a href="#ovos-pudim" class="hover:text-[#e1924f] transition-colors">Pudins Especiais</a>
+                <a href="#kit" class="hover:text-[#e1924f] transition-colors">Kits</a>
                 <a href="index.html" class="px-6 py-2.5 bg-[#bcc83f] text-white rounded-full shadow-sm hover:bg-[#aab734] transition-colors">Voltar</a>
             </div>
 
@@ -121,34 +121,34 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
                 <!-- Sabor 1 -->
-                <div class="bg-[#ffe9d6]/40 p-8 rounded-[2rem] shadow-soft border border-[#ffe9d6] text-center hover:-translate-y-2 transition-transform">
-                    <div class="w-20 h-20 bg-white rounded-full mx-auto mb-6 flex items-center justify-center shadow-sm border border-[#eab6c3]/30">
-                        <i data-lucide="cookie" class="w-10 h-10 text-[#e1924f]"></i>
+                <div class="bg-white p-4 rounded-[2rem] shadow-soft border border-[#ffe9d6] text-center hover:-translate-y-2 transition-transform group">
+                    <div class="w-full h-48 mb-6 overflow-hidden rounded-[1.5rem]">
+                        <img src="assets/ovo_brownie.png" alt="Ovo Brownie com Pudim" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <h3 class="text-2xl font-display text-[#e1924f] mb-3">Brownie com Pudim</h3>
-                    <p class="text-[#4a2c11]/80 text-sm font-medium leading-relaxed">
+                    <p class="text-[#4a2c11]/80 text-sm font-medium leading-relaxed px-4">
                         Pudim de chocolate branco, pedaços de brownie e geleia de morango.
                     </p>
                 </div>
                 
                 <!-- Sabor 2 -->
-                <div class="bg-[#ffe9d6]/40 p-8 rounded-[2rem] shadow-soft border border-[#ffe9d6] text-center hover:-translate-y-2 transition-transform">
-                    <div class="w-20 h-20 bg-white rounded-full mx-auto mb-6 flex items-center justify-center shadow-sm border border-[#eab6c3]/30">
-                        <i data-lucide="star" class="w-10 h-10 text-[#e1924f]"></i>
+                <div class="bg-white p-4 rounded-[2rem] shadow-soft border border-[#ffe9d6] text-center hover:-translate-y-2 transition-transform group">
+                    <div class="w-full h-48 mb-6 overflow-hidden rounded-[1.5rem]">
+                        <img src="assets/ovo_pudim.png" alt="Ovo Biscoff" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <h3 class="text-2xl font-display text-[#e1924f] mb-3">Biscoff</h3>
-                    <p class="text-[#4a2c11]/80 text-sm font-medium leading-relaxed">
+                    <p class="text-[#4a2c11]/80 text-sm font-medium leading-relaxed px-4">
                         Pudim de leite condensado, deliciosa farofa de biscoff e doce de leite.
                     </p>
                 </div>
 
                 <!-- Sabor 3 -->
-                <div class="bg-[#ffe9d6]/40 p-8 rounded-[2rem] shadow-soft border border-[#ffe9d6] text-center hover:-translate-y-2 transition-transform">
-                    <div class="w-20 h-20 bg-white rounded-full mx-auto mb-6 flex items-center justify-center shadow-sm border border-[#eab6c3]/30">
-                        <i data-lucide="droplet" class="w-10 h-10 text-[#e1924f]"></i>
+                <div class="bg-white p-4 rounded-[2rem] shadow-soft border border-[#ffe9d6] text-center hover:-translate-y-2 transition-transform group">
+                    <div class="w-full h-48 mb-6 overflow-hidden rounded-[1.5rem]">
+                        <img src="assets/ovo_pudim.png" alt="Ovo Brigadeiro de Pudim" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <h3 class="text-2xl font-display text-[#e1924f] mb-3">Brigadeiro de Pudim</h3>
-                    <p class="text-[#4a2c11]/80 text-sm font-medium leading-relaxed">
+                    <p class="text-[#4a2c11]/80 text-sm font-medium leading-relaxed px-4">
                         Muito creme, calda de caramelo e o nosso clássico brigadeiro de pudim.
                     </p>
                 </div>
@@ -181,56 +181,66 @@
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <!-- Clássicos -->
-                <div class="bg-white p-10 rounded-[3rem] shadow-soft border-2 border-white hover:border-[#dad999] transition-colors">
-                    <h3 class="font-display text-4xl text-[#bcc83f] mb-8 pb-4 border-b border-[#ffe9d6]">Sabores Incríveis</h3>
-                    <ul class="space-y-6 mb-10">
-                        <li class="flex items-center gap-4 text-xl font-bold text-[#4a2c11]">
-                            <i data-lucide="check-circle-2" class="text-[#dad999] w-6 h-6"></i>
-                            Leite Condensado
-                        </li>
-                        <li class="flex items-center gap-4 text-xl font-bold text-[#4a2c11]">
-                            <i data-lucide="check-circle-2" class="text-[#dad999] w-6 h-6"></i>
-                            Ninho com Nutella
-                        </li>
-                        <li class="flex items-center gap-4 text-xl font-bold text-[#4a2c11]">
-                            <i data-lucide="check-circle-2" class="text-[#dad999] w-6 h-6"></i>
-                            Chocolate Branco c/ calda de morango
-                        </li>
-                    </ul>
-                    <div class="flex gap-4">
-                        <div class="flex-1 bg-[#ffe9d6] p-4 rounded-2xl text-center">
-                            <span class="block text-sm font-bold text-[#9d591f] uppercase tracking-wider mb-1">350g</span>
-                            <span class="text-3xl font-display text-[#e1924f]">R$ 62,90</span>
-                        </div>
-                        <div class="flex-1 bg-[#ffe9d6] p-4 rounded-2xl text-center">
-                            <span class="block text-sm font-bold text-[#9d591f] uppercase tracking-wider mb-1">650g</span>
-                            <span class="text-3xl font-display text-[#e1924f]">R$ 92,90</span>
+                <div class="bg-white p-6 rounded-[3rem] shadow-soft border-2 border-white hover:border-[#dad999] transition-all group">
+                    <div class="w-full h-64 bg-[#ffe9d6] rounded-[2.5rem] mb-8 overflow-hidden">
+                        <img src="assets/ovo_pudim.png" alt="Ovos Pudim Clássicos" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="px-4">
+                        <h3 class="font-display text-4xl text-[#bcc83f] mb-8 pb-4 border-b border-[#ffe9d6]">Sabores Incríveis</h3>
+                        <ul class="space-y-6 mb-10">
+                            <li class="flex items-center gap-4 text-xl font-bold text-[#4a2c11]">
+                                <i data-lucide="check-circle-2" class="text-[#dad999] w-6 h-6"></i>
+                                Leite Condensado
+                            </li>
+                            <li class="flex items-center gap-4 text-xl font-bold text-[#4a2c11]">
+                                <i data-lucide="check-circle-2" class="text-[#dad999] w-6 h-6"></i>
+                                Ninho com Nutella
+                            </li>
+                            <li class="flex items-center gap-4 text-xl font-bold text-[#4a2c11]">
+                                <i data-lucide="check-circle-2" class="text-[#dad999] w-6 h-6"></i>
+                                Choc. Branco c/ calda de morango
+                            </li>
+                        </ul>
+                        <div class="flex gap-4">
+                            <div class="flex-1 bg-[#ffe9d6] p-4 rounded-2xl text-center">
+                                <span class="block text-sm font-bold text-[#9d591f] uppercase tracking-wider mb-1">350g</span>
+                                <span class="text-3xl font-display text-[#e1924f]">R$ 62,90</span>
+                            </div>
+                            <div class="flex-1 bg-[#ffe9d6] p-4 rounded-2xl text-center">
+                                <span class="block text-sm font-bold text-[#9d591f] uppercase tracking-wider mb-1">650g</span>
+                                <span class="text-3xl font-display text-[#e1924f]">R$ 92,90</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Premium -->
-                <div class="bg-white p-10 rounded-[3rem] shadow-soft border-2 border-white hover:border-[#eab6c3] transition-colors relative">
-                    <span class="absolute -top-4 right-10 bg-[#eab6c3] text-white px-4 py-1 rounded-full text-sm font-bold tracking-widest uppercase">Premium</span>
-                    <h3 class="font-display text-4xl text-[#eab6c3] mb-8 pb-4 border-b border-[#ffe9d6]">Sabores Premium</h3>
-                    <ul class="space-y-6 mb-10">
-                        <li class="flex items-center gap-4 text-xl font-bold text-[#4a2c11]">
-                            <i data-lucide="sparkles" class="text-[#eab6c3] w-6 h-6"></i>
-                            Pistache
-                        </li>
-                        <li class="flex items-center gap-4 text-xl font-bold text-[#4a2c11]">
-                            <i data-lucide="sparkles" class="text-[#eab6c3] w-6 h-6"></i>
-                            Kinder Bueno
-                        </li>
-                    </ul>
-                    <div class="flex gap-4 mt-auto">
-                        <div class="flex-1 bg-[#ffe9d6] p-4 rounded-2xl text-center">
-                            <span class="block text-sm font-bold text-[#9d591f] uppercase tracking-wider mb-1">350g</span>
-                            <span class="text-3xl font-display text-[#e1924f]">R$ 89,90</span>
-                        </div>
-                        <div class="flex-1 bg-[#ffe9d6] p-4 rounded-2xl text-center">
-                            <span class="block text-sm font-bold text-[#9d591f] uppercase tracking-wider mb-1">650g</span>
-                            <span class="text-3xl font-display text-[#e1924f]">R$ 139,90</span>
+                <div class="bg-white p-6 rounded-[3rem] shadow-soft border-2 border-white hover:border-[#eab6c3] transition-all group relative">
+                    <span class="absolute top-4 right-10 z-10 bg-[#eab6c3] text-white px-4 py-1 rounded-full text-sm font-bold tracking-widest uppercase shadow-md">Premium</span>
+                    <div class="w-full h-64 bg-[#ffe9d6] rounded-[2.5rem] mb-8 overflow-hidden">
+                        <img src="assets/ovo_pistache.png" alt="Ovos Pudim Premium" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="px-4">
+                        <h3 class="font-display text-4xl text-[#eab6c3] mb-8 pb-4 border-b border-[#ffe9d6]">Sabores Premium</h3>
+                        <ul class="space-y-6 mb-10">
+                            <li class="flex items-center gap-4 text-xl font-bold text-[#4a2c11]">
+                                <i data-lucide="sparkles" class="text-[#eab6c3] w-6 h-6"></i>
+                                Pistache
+                            </li>
+                            <li class="flex items-center gap-4 text-xl font-bold text-[#4a2c11]">
+                                <i data-lucide="sparkles" class="text-[#eab6c3] w-6 h-6"></i>
+                                Kinder Bueno
+                            </li>
+                        </ul>
+                        <div class="flex gap-4 mt-auto">
+                            <div class="flex-1 bg-[#ffe9d6] p-4 rounded-2xl text-center">
+                                <span class="block text-sm font-bold text-[#9d591f] uppercase tracking-wider mb-1">350g</span>
+                                <span class="text-3xl font-display text-[#e1924f]">R$ 89,90</span>
+                            </div>
+                            <div class="flex-1 bg-[#ffe9d6] p-4 rounded-2xl text-center">
+                                <span class="block text-sm font-bold text-[#9d591f] uppercase tracking-wider mb-1">650g</span>
+                                <span class="text-3xl font-display text-[#e1924f]">R$ 139,90</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -244,18 +254,18 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 
                 <!-- Barra -->
-                <div class="glass-panel rounded-[3rem] p-10 flex flex-col items-center text-center shadow-soft relative overflow-hidden">
-                    <div class="absolute -right-10 -top-10 text-[#dad999] opacity-30">
-                        <i data-lucide="gift" class="w-48 h-48"></i>
+                <div class="glass-panel rounded-[3rem] p-10 flex flex-col items-center text-center shadow-soft relative overflow-hidden group">
+                    <div class="w-full h-64 bg-white rounded-[2rem] mb-8 overflow-hidden">
+                        <img src="assets/barra_pudim.png" alt="Barra de Pudim" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <h2 class="font-display text-5xl text-[#e1924f] mb-2 relative z-10">Barra de Pudim</h2>
                     <p class="text-[#9d591f] font-medium text-sm mb-8 relative z-10">O grande sucesso da última páscoa está de volta para te surpreender!</p>
                     
-                    <div class="w-full bg-white rounded-2xl p-6 mb-8 relative z-10 text-left">
+                    <div class="w-full bg-white/50 backdrop-blur-sm rounded-2xl p-6 mb-8 relative z-10 text-left border border-white">
                         <span class="font-bold text-[#eab6c3] uppercase tracking-wider text-xs block mb-3">Sabores disponíveis:</span>
                         <ul class="space-y-2 font-bold text-[#4a2c11]">
-                            <li>• Leite condensado</li>
-                            <li>• Chocolate branco c/ calda de morango</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#dad999]"></i> Leite condensado</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#dad999]"></i> Chocolate branco c/ calda de morango</li>
                         </ul>
                     </div>
 
@@ -266,19 +276,22 @@
                 </div>
 
                 <!-- Trufas -->
-                <div class="glass-panel rounded-[3rem] p-10 flex flex-col items-center text-center shadow-soft relative overflow-hidden">
+                <div class="glass-panel rounded-[3rem] p-10 flex flex-col items-center text-center shadow-soft relative overflow-hidden group">
                     <div class="absolute -left-10 -top-10 text-[#eab6c3] opacity-20">
                         <i data-lucide="heart" class="w-48 h-48"></i>
+                    </div>
+                    <div class="w-full h-64 bg-white rounded-[2rem] mb-8 overflow-hidden">
+                        <img src="assets/trufas.png" alt="Trufas de Pudim" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
                     <h2 class="font-display text-5xl text-[#e1924f] mb-2 relative z-10">Trufa de Pudim</h2>
                     <p class="text-[#9d591f] font-medium text-sm mb-8 relative z-10">Pequenas porções de felicidade para presentear.</p>
                     
-                    <div class="w-full bg-white rounded-2xl p-6 mb-8 relative z-10 text-left">
+                    <div class="w-full bg-white/50 backdrop-blur-sm rounded-2xl p-6 mb-8 relative z-10 text-left border border-white">
                         <span class="font-bold text-[#bcc83f] uppercase tracking-wider text-xs block mb-3">Sabores disponíveis:</span>
                         <ul class="space-y-2 font-bold text-[#4a2c11]">
-                            <li>• Leite condensado</li>
-                            <li>• Ninho com Nutella</li>
-                            <li>• Chocolate branco c/ calda de morango</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#dad999]"></i> Leite condensado</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#dad999]"></i> Ninho com Nutella</li>
+                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-[#dad999]"></i> Choc. branco c/ calda de morango</li>
                         </ul>
                     </div>
 
@@ -310,8 +323,11 @@
                 Um kit exclusivo para você experimentar 3 sabores e escolher o seu favorito <br><span class="italic text-sm">(ou se apaixonar por todos rs)</span>
             </p>
 
-            <div class="bg-white rounded-[3rem] p-10 shadow-strong flex flex-col md:flex-row items-center justify-between gap-10">
-                <div class="text-left">
+            <div class="bg-white rounded-[3rem] p-10 shadow-strong flex flex-col md:flex-row items-center justify-between gap-10 group">
+                <div class="w-full md:w-1/2 h-64 overflow-hidden rounded-[2rem]">
+                    <img src="assets/trufas.png" alt="Kit Degustação" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                </div>
+                <div class="text-left flex-1">
                     <span class="font-bold text-[#eab6c3] uppercase tracking-wider text-sm block mb-4">Os 3 sabores inclusos:</span>
                     <ul class="space-y-4">
                         <li class="flex items-center gap-3 font-bold text-[#4a2c11] text-lg">
@@ -327,11 +343,10 @@
                             Chocolate branco c/ calda de morango
                         </li>
                     </ul>
-                </div>
-                
-                <div class="bg-[#ffe9d6] p-8 rounded-[2rem] text-center min-w-[250px] border-2 border-[#eab6c3]/20">
-                    <span class="font-bold text-[#9d591f] text-sm uppercase tracking-widest block mb-2">3 unidades (35g cada)</span>
-                    <span class="text-6xl font-display text-[#e1924f] block">R$ 34,90</span>
+                    <div class="bg-[#ffe9d6] p-6 rounded-[2rem] text-center mt-8 border-2 border-[#eab6c3]/20">
+                        <span class="font-bold text-[#9d591f] text-sm uppercase tracking-widest block mb-1">3 unidades (35g cada)</span>
+                        <span class="text-5xl font-display text-[#e1924f] block">R$ 34,90</span>
+                    </div>
                 </div>
             </div>
             
@@ -360,7 +375,7 @@
             </div>
             
             <div class="flex gap-6 text-[#9d591f] font-bold">
-                <a href="cardapio" class="hover:text-[#eab6c3] transition-colors">Cardápio Geral</a>
+                <a href="cardapio.html" class="hover:text-[#eab6c3] transition-colors">Cardápio Geral</a>
                 <a href="#" class="hover:text-[#eab6c3] transition-colors">Instagram</a>
                 <a href="./" class="hover:text-[#eab6c3] transition-colors">WhatsApp</a>
             </div>
@@ -392,7 +407,7 @@
                     <button class="absolute top-6 right-6 p-2 close-menu text-[#eab6c3]">
                         <i data-lucide="x" class="w-8 h-8"></i>
                     </button>
-                    <a href="cardapio" class="text-3xl font-display text-[#e1924f] hover:text-[#eab6c3]">Cardápio Geral</a>
+                    <a href="cardapio.html" class="text-3xl font-display text-[#e1924f] hover:text-[#eab6c3]">Cardápio Geral</a>
                     <a href="#ovos-trufados" class="text-3xl font-display text-[#e1924f] hover:text-[#eab6c3]">Ovos Trufados</a>
                     <a href="#ovos-pudim" class="text-3xl font-display text-[#e1924f] hover:text-[#eab6c3]">Ovos Pudim</a>
                     <a href="#barras-trufas" class="text-3xl font-display text-[#e1924f] hover:text-[#eab6c3]">Barras & Trufas</a>
