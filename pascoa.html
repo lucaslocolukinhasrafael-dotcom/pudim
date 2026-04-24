@@ -8,23 +8,45 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,600&family=Grand+Hotel&display=swap" rel="stylesheet">
     <style>
-    body { font-family: 'Montserrat', sans-serif; }
+    /* Custom Font Assignments */
+    body { font-family: 'Montserrat', sans-serif; background-color: #fdfaf6; }
     .font-display { font-family: 'Playfair Display', serif; }
     .font-script { font-family: 'Grand Hotel', cursive; }
     
-    ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-track { background: #ffe9d6; }
-    ::-webkit-scrollbar-thumb { background: #eab6c3; border-radius: 4px; }
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #e1924f; border-radius: 3px; }
     
-    .shadow-soft {
-        box-shadow: 0 10px 25px -5px rgba(234, 182, 195, 0.25), 0 8px 10px -6px rgba(234, 182, 195, 0.15);
+    /* Soft Shadow Utility */
+    .shadow-soft { box-shadow: 0 10px 25px -5px rgba(225, 146, 79, 0.15), 0 8px 10px -6px rgba(225, 146, 79, 0.1); }
+    
+    /* Scroll Reveal */
+    .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); filter: blur(4px); }
+    .reveal.active { opacity: 1; transform: translateY(0); filter: blur(0); }
+    
+    /* Glassmorphism Panels */
+    .glass-panel {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255,255,255,0.4) 100%);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        box-shadow: 0 10px 30px rgba(225, 146, 79, 0.05);
     }
-    .shadow-strong {
-        box-shadow: 0 15px 30px -5px rgba(225, 146, 79, 0.2);
+    
+    /* Background Grid */
+    .bg-grid {
+        background-size: 40px 40px;
+        background-image: linear-gradient(to right, rgba(225, 146, 79, 0.05) 1px, transparent 1px),
+                          linear-gradient(to bottom, rgba(225, 146, 79, 0.05) 1px, transparent 1px);
+        mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
     }
     </style>
 </head>
-<body class="bg-[#ffe9d6] text-[#4a2c11] antialiased selection:bg-[#eab6c3] selection:text-white overflow-x-hidden">
+<body class="bg-[#fdfaf6] text-[#4a2c11] antialiased selection:bg-[#bcc83f] selection:text-white overflow-x-hidden relative">
+    <div class="fixed inset-0 pointer-events-none -z-10 bg-grid"></div>
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-[#ffe9d6] rounded-full blur-[120px] -z-10 opacity-60"></div>
+    <div class="fixed bottom-0 right-0 w-[400px] h-[400px] bg-[#dad999] rounded-full blur-[100px] -z-10 opacity-30"></div>
 
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 right-0 z-50 px-6 py-3 md:py-4 bg-[#ffe9d6]/95 backdrop-blur-md border-b border-[#eab6c3]/30">
@@ -53,10 +75,11 @@
                 <i data-lucide="menu" class="w-8 h-8"></i>
             </button>
         </div>
+    </div>
     </nav>
 
     <!-- Hero Páscoa -->
-    <section class="relative pt-32 pb-20 md:pt-40 md:pb-32 min-h-[80vh] flex flex-col justify-center overflow-hidden">
+    <section class="relative pt-32 pb-20 md:pt-40 md:pb-32 min-h-[80vh] flex flex-col justify-center overflow-hidden reveal">
         
         <!-- Decorative Background Elements (Easter Vibes) -->
         <div class="absolute inset-0 pointer-events-none opacity-20 flex items-center justify-center">
@@ -84,7 +107,7 @@
     </section>
 
     <!-- Ovos Trufados (Lançamento) -->
-    <section id="ovos-trufados" class="py-24 relative bg-white border-t border-[#eab6c3]/30 rounded-t-[3rem] -mt-10 z-20">
+    <section id="ovos-trufados" class="py-24 relative bg-white border-t border-[#eab6c3]/30 rounded-t-[3rem] -mt-10 z-20 reveal">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-16 relative">
                 <span class="absolute -top-12 left-1/2 -translate-x-1/2 bg-[#bcc83f] text-white px-6 py-2 rounded-full font-bold text-lg uppercase tracking-wider shadow-strong rotate-2">Lançamento</span>
@@ -147,7 +170,7 @@
     </section>
 
     <!-- Ovos Pudim -->
-    <section id="ovos-pudim" class="py-24 bg-[#ffe9d6] border-t border-[#eab6c3]/30">
+    <section id="ovos-pudim" class="py-24 bg-[#ffe9d6] border-t border-[#eab6c3]/30 reveal">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-16">
                 <span class="font-script text-[#eab6c3] text-5xl block mb-2">Os Queridinhos</span>
@@ -214,12 +237,12 @@
     </section>
 
     <!-- Barras e Trufas -->
-    <section id="barras-trufas" class="py-24 bg-white border-t border-[#eab6c3]/30">
+    <section id="barras-trufas" class="py-24 bg-white border-t border-[#eab6c3]/30 reveal">
         <div class="max-w-6xl mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 
                 <!-- Barra -->
-                <div class="bg-[#ffe9d6]/50 rounded-[3rem] p-10 flex flex-col items-center text-center shadow-soft relative overflow-hidden">
+                <div class="glass-panel rounded-[3rem] p-10 flex flex-col items-center text-center shadow-soft relative overflow-hidden">
                     <div class="absolute -right-10 -top-10 text-[#dad999] opacity-30">
                         <i data-lucide="gift" class="w-48 h-48"></i>
                     </div>
@@ -241,7 +264,7 @@
                 </div>
 
                 <!-- Trufas -->
-                <div class="bg-[#ffe9d6]/50 rounded-[3rem] p-10 flex flex-col items-center text-center shadow-soft relative overflow-hidden">
+                <div class="glass-panel rounded-[3rem] p-10 flex flex-col items-center text-center shadow-soft relative overflow-hidden">
                     <div class="absolute -left-10 -top-10 text-[#eab6c3] opacity-20">
                         <i data-lucide="heart" class="w-48 h-48"></i>
                     </div>
@@ -271,7 +294,7 @@
     </section>
 
     <!-- Kit Degustação -->
-    <section id="kit" class="py-24 bg-[#eab6c3] relative overflow-hidden">
+    <section id="kit" class="py-24 bg-[#eab6c3] relative overflow-hidden reveal">
         <!-- Decor -->
         <svg class="absolute top-0 right-0 w-96 h-96 text-white/10 -translate-y-1/2 translate-x-1/3" viewBox="0 0 200 200" fill="currentColor">
             <path d="M100 0 C120 40 160 20 150 60 C190 70 170 110 140 100 C150 140 110 130 100 160 C80 120 40 140 50 100 C10 90 30 50 60 60 C50 20 90 30 100 0 Z"/>
@@ -344,8 +367,18 @@
         </div>
     </footer>
 
+    
     <script>
         lucide.createIcons();
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
         
         // Mobile Menu Logic
         const menuBtn = document.querySelector('button.lg\\:hidden');

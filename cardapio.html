@@ -9,32 +9,48 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Grand+Hotel&display=swap" rel="stylesheet">
     <style>
     /* Custom Font Assignments */
-    body { font-family: 'Montserrat', sans-serif; }
+    body { font-family: 'Montserrat', sans-serif; background-color: #fdfaf6; }
     .font-display { font-family: 'Playfair Display', serif; }
     .font-script { font-family: 'Grand Hotel', cursive; }
     
     /* Custom Scrollbar */
-    ::-webkit-scrollbar { width: 8px; }
-    ::-webkit-scrollbar-track { background: #ffe9d6; }
-    ::-webkit-scrollbar-thumb { background: #e1924f; border-radius: 4px; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: transparent; }
+    ::-webkit-scrollbar-thumb { background: #e1924f; border-radius: 3px; }
     
     /* Soft Shadow Utility */
-    .shadow-soft {
-        box-shadow: 0 10px 25px -5px rgba(225, 146, 79, 0.15), 0 8px 10px -6px rgba(225, 146, 79, 0.1);
+    .shadow-soft { box-shadow: 0 10px 25px -5px rgba(225, 146, 79, 0.15), 0 8px 10px -6px rgba(225, 146, 79, 0.1); }
+    
+    /* Scroll Reveal */
+    .reveal { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); filter: blur(4px); }
+    .reveal.active { opacity: 1; transform: translateY(0); filter: blur(0); }
+    
+    /* Glassmorphism Panels */
+    .glass-panel {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255,255,255,0.4) 100%);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.8);
+        box-shadow: 0 10px 30px rgba(225, 146, 79, 0.05);
     }
     
-    /* Flower Background Pattern (Optional subtle detail) */
-    .bg-flowers {
-        background-image: radial-gradient(#bcc83f 2px, transparent 2px);
+    /* Background Grid */
+    .bg-grid {
         background-size: 40px 40px;
-        opacity: 0.3;
+        background-image: linear-gradient(to right, rgba(225, 146, 79, 0.05) 1px, transparent 1px),
+                          linear-gradient(to bottom, rgba(225, 146, 79, 0.05) 1px, transparent 1px);
+        mask-image: radial-gradient(circle at center, black 40%, transparent 100%);
     }
     </style>
 </head>
-<body class="bg-[#ffe9d6] text-[#4a2c11] antialiased selection:bg-[#bcc83f] selection:text-white overflow-x-hidden">
+<body class="bg-[#fdfaf6] text-[#4a2c11] antialiased selection:bg-[#bcc83f] selection:text-white overflow-x-hidden relative">
+    <div class="fixed inset-0 pointer-events-none -z-10 bg-grid"></div>
+    <div class="fixed top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-[#ffe9d6] rounded-full blur-[120px] -z-10 opacity-60"></div>
+    <div class="fixed bottom-0 right-0 w-[400px] h-[400px] bg-[#dad999] rounded-full blur-[100px] -z-10 opacity-30"></div>
 
     <!-- Navigation -->
-    <nav class="fixed top-0 left-0 right-0 z-50 px-6 py-3 md:py-4 bg-[#ffe9d6]/95 backdrop-blur-md border-b border-[#e1924f]/20">
+    <nav class="fixed top-4 md:top-6 left-1/2 -translate-x-1/2 w-[95%] md:w-[92%] max-w-7xl z-50 transition-all duration-300">
+        <div class="glass-panel rounded-full p-2 pl-4 md:pl-6 flex items-center justify-between shadow-soft">
         <div class="max-w-7xl mx-auto flex items-center justify-between">
             <!-- Logo -->
             <a href="#" class="flex items-center group">
@@ -58,7 +74,7 @@
 
             <!-- Desktop Menu -->
             <div class="hidden lg:flex items-center gap-6 font-medium text-sm text-[#9d591f]">
-                <a href="#acasa" class="px-5 py-2 bg-[#bcc83f] text-white rounded-full shadow-soft transition-transform hover:-translate-y-0.5">Início</a>
+                <a href="#acasa" class="px-6 py-2.5 bg-[#bcc83f] text-white rounded-full shadow-sm hover:bg-[#aab734] transition-colors">Início</a>
                 <a href="#quiches" class="hover:text-[#e1924f] transition-colors">Quiches</a>
                 <a href="#pudins" class="hover:text-[#e1924f] transition-colors">Pudins</a>
                 <a href="#geladinhos" class="hover:text-[#e1924f] transition-colors">Geladinhos</a>
@@ -72,10 +88,11 @@
                 <i data-lucide="menu" class="w-8 h-8"></i>
             </button>
         </div>
+    </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="acasa" class="relative pt-32 pb-20 md:pt-40 md:pb-32 min-h-screen flex flex-col justify-center overflow-hidden">
+    <section id="acasa" class="relative pt-32 pb-20 md:pt-40 md:pb-32 min-h-screen flex flex-col justify-center overflow-hidden reveal active">
         
         <!-- Decorative Background Flowers -->
         <div class="absolute inset-0 pointer-events-none opacity-20">
@@ -104,20 +121,18 @@
 
             <!-- Bottom Layout Grid -->
             <div class="w-full flex flex-col md:flex-row gap-6 justify-center items-center">
-                <a href="#pudins" class="w-full md:w-auto flex items-center justify-center gap-3 bg-[#e1924f] text-white rounded-full px-8 py-3 shadow-soft hover:-translate-y-1 transition-all">
-                    <i data-lucide="cake-slice" class="w-5 h-5"></i>
-                    <span class="font-bold text-sm tracking-widest uppercase">Ver Pudins</span>
+                <a href="#pudins" class="w-full md:w-auto flex items-center justify-center bg-[#e1924f] text-white rounded-full px-10 py-4 shadow-soft hover:-translate-y-1 transition-all">
+                    <span class="font-bold text-sm tracking-[0.2em] uppercase">Ver Pudins</span>
                 </a>
-                <a href="#quiches" class="w-full md:w-auto flex items-center justify-center gap-3 bg-[#dad999] text-[#4a2c11] rounded-full px-8 py-3 shadow-soft hover:-translate-y-1 transition-all">
-                    <i data-lucide="pizza" class="w-5 h-5"></i>
-                    <span class="font-bold text-sm tracking-widest uppercase">Ver Quiches</span>
+                <a href="#quiches" class="w-full md:w-auto flex items-center justify-center bg-[#dad999] text-[#4a2c11] rounded-full px-10 py-4 shadow-soft hover:-translate-y-1 transition-all">
+                    <span class="font-bold text-sm tracking-[0.2em] uppercase">Ver Quiches</span>
                 </a>
             </div>
         </div>
     </section>
 
     <!-- Quiches Section -->
-    <section id="quiches" class="py-24 relative overflow-hidden border-t border-[#e1924f]/20 bg-white/50">
+    <section id="quiches" class="py-24 relative overflow-hidden border-t border-[#e1924f]/20 transparent reveal">
         <div class="max-w-6xl mx-auto px-6 relative z-10">
             <div class="text-center mb-16">
                 <span class="font-script text-[#bcc83f] text-4xl block mb-2">Salgados</span>
@@ -196,7 +211,7 @@
     </section>
 
     <!-- Pudins Section -->
-    <section id="pudins" class="py-24 bg-white border-t border-[#e1924f]/20">
+    <section id="pudins" class="py-24 relative overflow-hidden border-t border-[#e1924f]/20 reveal">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-16">
                 <h2 class="text-5xl md:text-6xl font-display tracking-tight text-[#e1924f] uppercase">Nossos Pudins</h2>
@@ -205,7 +220,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Clássicos -->
-                <div class="bg-[#ffe9d6]/50 rounded-[2.5rem] p-6 shadow-soft hover:-translate-y-2 transition-transform duration-300 flex flex-col border border-[#ffe9d6]">
+                <div class="glass-panel rounded-[2.5rem] p-6 shadow-soft hover:-translate-y-2 transition-transform duration-300 flex flex-col border border-[#ffe9d6]">
                     <div class="rounded-[2rem] h-48 mb-6 overflow-hidden flex items-center justify-center">
                          <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=800" class="w-full h-full object-cover" alt="Pudins Clássicos">
                     </div>
@@ -235,7 +250,7 @@
                 </div>
 
                 <!-- Premium -->
-                <div class="bg-[#ffe9d6]/50 rounded-[2.5rem] p-6 shadow-soft hover:-translate-y-2 transition-transform duration-300 flex flex-col border border-[#ffe9d6] relative">
+                <div class="glass-panel rounded-[2.5rem] p-6 shadow-soft hover:-translate-y-2 transition-transform duration-300 flex flex-col border border-[#ffe9d6] relative">
                     <div class="rounded-[2rem] h-48 mb-6 overflow-hidden flex items-center justify-center">
                         <img src="https://images.unsplash.com/photo-1579954115545-a95591f28bfc?w=800" class="w-full h-full object-cover" alt="Pudins Premium">
                     </div>
@@ -265,7 +280,7 @@
                 </div>
 
                 <!-- Diet -->
-                <div class="bg-[#ffe9d6]/50 rounded-[2.5rem] p-6 shadow-soft hover:-translate-y-2 transition-transform duration-300 flex flex-col border border-[#ffe9d6]">
+                <div class="glass-panel rounded-[2.5rem] p-6 shadow-soft hover:-translate-y-2 transition-transform duration-300 flex flex-col border border-[#ffe9d6]">
                     <div class="rounded-[2rem] h-48 mb-6 overflow-hidden flex items-center justify-center bg-white p-2">
                         <img src="https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?w=800" class="w-full h-full object-cover rounded-[1.5rem]" alt="Pudim Diet">
                     </div>
@@ -293,7 +308,7 @@
     </section>
 
     <!-- Geladinhos Section -->
-    <section id="geladinhos" class="py-24 bg-[#ffe9d6] border-t border-[#e1924f]/20">
+    <section id="geladinhos" class="py-24 relative border-t border-[#e1924f]/20 reveal">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-16">
                 <span class="font-script text-[#eab6c3] text-5xl block mb-2">Geladinhos</span>
@@ -301,7 +316,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <!-- Clássicos -->
-                <div class="bg-white rounded-[2.5rem] p-8 shadow-soft hover:-translate-y-2 transition-transform duration-300">
+                <div class="glass-panel rounded-[2.5rem] p-8 shadow-soft hover:-translate-y-2 transition-transform duration-300">
                     <h3 class="text-3xl font-display text-[#e1924f] mb-6 border-b border-[#ffe9d6] pb-4">Clássicos</h3>
                     <div class="flex flex-wrap gap-2 mb-8">
                         <span class="bg-[#eab6c3] text-white px-4 py-1 rounded-full text-sm font-bold">Doce de Leite</span>
@@ -322,7 +337,7 @@
                 </div>
 
                 <!-- Premium -->
-                <div class="bg-white rounded-[2.5rem] p-8 shadow-soft hover:-translate-y-2 transition-transform duration-300">
+                <div class="glass-panel rounded-[2.5rem] p-8 shadow-soft hover:-translate-y-2 transition-transform duration-300">
                     <h3 class="text-3xl font-display text-[#e1924f] mb-6 border-b border-[#ffe9d6] pb-4">Premiuns</h3>
                     <div class="flex flex-wrap gap-2 mb-8">
                         <span class="bg-[#eab6c3] text-white px-4 py-1 rounded-full text-sm font-bold">Pistache</span>
@@ -346,7 +361,7 @@
     </section>
 
     <!-- Especiais Section -->
-    <section id="especiais" class="py-24 bg-white border-t border-[#e1924f]/20">
+    <section id="especiais" class="py-24 relative overflow-hidden border-t border-[#e1924f]/20 reveal">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-16">
                 <span class="font-script text-[#bcc83f] text-5xl block mb-2">Confeitaria do Jardim</span>
@@ -355,7 +370,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
                 <!-- Morangoff -->
-                <div class="bg-white border border-[#ffe9d6] rounded-[2rem] p-5 shadow-soft flex flex-col items-center">
+                <div class="glass-panel border-white/50 rounded-[2rem] p-5 shadow-soft flex flex-col items-center">
                     <div class="w-full h-48 bg-[#ffe9d6] rounded-[1.5rem] mb-6 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1464305795204-6f5bbfc7fb81?w=800" class="w-full h-full object-cover" alt="Morangoff">
                     </div>
@@ -374,7 +389,7 @@
                 </div>
 
                 <!-- Banoff -->
-                <div class="bg-white border border-[#ffe9d6] rounded-[2rem] p-5 shadow-soft flex flex-col items-center">
+                <div class="glass-panel border-white/50 rounded-[2rem] p-5 shadow-soft flex flex-col items-center">
                     <div class="w-full h-48 bg-[#ffe9d6] rounded-[1.5rem] mb-6 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=800" class="w-full h-full object-cover" alt="Banoff">
                     </div>
@@ -393,7 +408,7 @@
                 </div>
 
                 <!-- Bala Baiana -->
-                <div class="bg-white border border-[#ffe9d6] rounded-[2rem] p-5 shadow-soft flex flex-col items-center">
+                <div class="glass-panel border-white/50 rounded-[2rem] p-5 shadow-soft flex flex-col items-center">
                     <div class="w-full h-48 bg-[#ffe9d6] rounded-[1.5rem] mb-6 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1579954115545-a95591f28bfc?w=800" class="w-full h-full object-cover" alt="Bala Baiana">
                     </div>
@@ -408,7 +423,7 @@
                 </div>
 
                 <!-- Capivara -->
-                <div class="bg-white border border-[#ffe9d6] rounded-[2rem] p-5 shadow-soft flex flex-col items-center">
+                <div class="glass-panel border-white/50 rounded-[2rem] p-5 shadow-soft flex flex-col items-center">
                     <div class="w-full h-48 bg-[#ffe9d6] rounded-[1.5rem] mb-6 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=800" class="w-full h-full object-cover" alt="Capivara">
                     </div>
@@ -423,7 +438,7 @@
                 </div>
 
                 <!-- Bolopudim -->
-                <div class="bg-white border border-[#ffe9d6] rounded-[2rem] p-5 shadow-soft flex flex-col items-center">
+                <div class="glass-panel border-white/50 rounded-[2rem] p-5 shadow-soft flex flex-col items-center">
                     <div class="w-full h-48 bg-[#ffe9d6] rounded-[1.5rem] mb-6 overflow-hidden">
                         <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=800" class="w-full h-full object-cover" alt="Bolopudim">
                     </div>
@@ -446,7 +461,7 @@
     </section>
 
     <!-- Combos Section -->
-    <section id="combos" class="py-24 bg-[#ffe9d6] border-t border-[#e1924f]/20">
+    <section id="combos" class="py-24 relative border-t border-[#e1924f]/20 reveal">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-16">
                 <span class="font-script text-[#e1924f] text-5xl block mb-2">Combos</span>
@@ -454,7 +469,7 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <!-- Combo 1 -->
-                <div class="bg-white rounded-[2rem] p-8 shadow-soft text-center flex flex-col">
+                <div class="glass-panel rounded-[2rem] p-8 shadow-soft text-center flex flex-col">
                     <h3 class="text-3xl font-display text-[#e1924f] mb-4">04 Pudins<br>Clássicos</h3>
                     <div class="mt-auto">
                         <div class="bg-[#dad999] py-4 rounded-xl">
@@ -464,7 +479,7 @@
                 </div>
 
                 <!-- Combo 2 -->
-                <div class="bg-white rounded-[2rem] p-8 shadow-soft text-center flex flex-col border-2 border-[#bcc83f] transform md:-translate-y-4">
+                <div class="glass-panel rounded-[2rem] p-8 shadow-soft text-center flex flex-col border-2 border-[#bcc83f] transform md:-translate-y-4">
                     <h3 class="text-3xl font-display text-[#bcc83f] mb-4">04 Pudins<br>Premiuns</h3>
                     <div class="mt-auto">
                         <div class="bg-[#bcc83f] py-4 rounded-xl text-white">
@@ -474,7 +489,7 @@
                 </div>
 
                 <!-- Combo 3 -->
-                <div class="bg-white rounded-[2rem] p-8 shadow-soft text-center flex flex-col">
+                <div class="glass-panel rounded-[2rem] p-8 shadow-soft text-center flex flex-col">
                     <h3 class="text-3xl font-display text-[#e1924f] mb-2">Degustação</h3>
                     <p class="text-[#4a2c11] font-medium text-sm mb-6">10 pudins P e no máximo 5 premiuns</p>
                     <div class="mt-auto">
@@ -488,7 +503,7 @@
     </section>
 
     <!-- Lembrancinhas e Bebidas -->
-    <section id="lembrancinhas" class="py-24 bg-white border-t border-[#e1924f]/20">
+    <section id="lembrancinhas" class="py-24 relative overflow-hidden border-t border-[#e1924f]/20 reveal">
         <div class="max-w-5xl mx-auto px-6">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
                 
@@ -498,7 +513,7 @@
                     <p class="text-[#9d591f] mb-6 font-medium text-lg leading-relaxed">
                         O Jardim dos pudins quer tornar seu evento ainda mais especial. Temos pudim para lembrancinha a partir de <strong class="text-[#eab6c3] text-xl">R$ 7,00</strong> (o de 80g acima de 10 unidades) já com etiqueta personalizada.
                     </p>
-                    <div class="bg-[#ffe9d6]/50 border border-[#ffe9d6] rounded-2xl p-5 mb-6">
+                    <div class="glass-panel border border-[#ffe9d6] rounded-2xl p-5 mb-6">
                         <span class="font-bold text-[#e1924f] block mb-1">Opções adicionais:</span>
                         <span class="text-[#4a2c11]">Enfeites, colherzinhas e fita de cetim</span>
                     </div>
@@ -558,8 +573,18 @@
         </div>
     </footer>
 
+    
     <script>
         lucide.createIcons();
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
         
         // Mobile Menu Toggle Logic
         const menuBtn = document.querySelector('button.lg\\:hidden');
